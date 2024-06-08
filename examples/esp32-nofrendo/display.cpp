@@ -48,13 +48,18 @@ Arduino_ST7789 *gfx = new Arduino_ST7789(bus, -1 /* RST */, 1 /* rotation */, tr
 
 /* ST7796 on breadboard */
 // #define TFT_BL 32
-Arduino_DataBus *bus = new Arduino_ESP32SPI(32 /* DC */, -1 /* CS */, 25 /* SCK */, 33 /* MOSI */, -1 /* MISO */);
-Arduino_TFT *gfx = new Arduino_ST7796(bus, -1 /* RST */, 1 /* rotation */);
+// Arduino_DataBus *bus = new Arduino_ESP32SPI(32 /* DC */, -1 /* CS */, 25 /* SCK */, 33 /* MOSI */, -1 /* MISO */);
+// Arduino_TFT *gfx = new Arduino_ST7796(bus, -1 /* RST */, 1 /* rotation */);
 
 /* ST7796 on LCDKit */
 // #define TFT_BL 23
 // Arduino_DataBus *bus = new Arduino_ESP32SPI(19 /* DC */, 5 /* CS */, 22 /* SCK */, 21 /* MOSI */, -1 /* MISO */);
 // Arduino_ST7796 *gfx = new Arduino_ST7796(bus, 18, 1 /* rotation */);
+
+/* Fri3D Camp 2022 badge */
+#define TFT_BL 36 // unused?
+Arduino_DataBus *bus = new Arduino_ESP32SPI(33 /* DC */, 5 /* CS */, SCK, MOSI, MISO);
+Arduino_ST7789 *gfx = new Arduino_ST7789(bus, -1, 0 /* rotation */, true /* IPS */, 240 /* width */, 240 /* height */);
 
 #endif /* custom hardware */
 

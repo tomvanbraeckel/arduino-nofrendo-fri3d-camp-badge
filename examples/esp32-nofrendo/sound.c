@@ -134,19 +134,19 @@ void IRAM_ATTR audioSampleTimer()
 	}
 
 	uint16_t s = audio_frame[audio_frame_idx];
-	LEDC.channel_group[0].channel[2].duty.duty = s >> 3;
-	LEDC.channel_group[0].channel[2].conf0.sig_out_en = 1; // This is the output enable control bit for channel
-	LEDC.channel_group[0].channel[2].conf1.duty_start = 1; // When duty_num duty_cycle and duty_scale has been configured. these register won't take effect until set duty_start. this bit is automatically cleared by hardware
-	LEDC.channel_group[0].channel[2].conf0.clk_en = 1;
+	LEDC.channel_group[0].channel[0].duty.duty = s >> 3;
+	LEDC.channel_group[0].channel[0].conf0.sig_out_en = 1; // This is the output enable control bit for channel
+	LEDC.channel_group[0].channel[0].conf1.duty_start = 1; // When duty_num duty_cycle and duty_scale has been configured. these register won't take effect until set duty_start. this bit is automatically cleared by hardware
+	LEDC.channel_group[0].channel[0].conf0.clk_en = 1;
 }
 
 int osd_init_sound()
 {
 	audio_frame = NOFRENDO_MALLOC(4 * DEFAULT_FRAGSIZE);
-
-	ledcSetup(2, 2000000, 10);
-	ledcAttachPin(HW_AUDIO_BUZZER_PIN, 2);
-	ledcWrite(2, 0);
+  
+  ledcSetup(0, 22050*8, 8);
+  ledcAttachPin(32, 0);
+  ledcWrite(0, 0);
 
 	// Use 1st timer of 4 (counted from zero).
 	// Set 80 divider for prescaler (see ESP32 Technical Reference Manual for more

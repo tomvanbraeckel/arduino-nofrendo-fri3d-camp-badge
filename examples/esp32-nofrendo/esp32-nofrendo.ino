@@ -24,6 +24,7 @@ extern void display_begin();
 void setup()
 {
     Serial.begin(115200);
+    Serial.println("arduino-nofrendo-fri3d-camp-badge starting...");
 
     // turn off WiFi
     esp_wifi_deinit();
@@ -48,9 +49,20 @@ void setup()
     }
     else
     {
+        int fileToUse = 0; // which .nes file to use. 0 means use the first one.
+        int fileCounter = 0;
         bool foundRom = false;
 
+        Serial.println("Files found:");
         File file = root.openNextFile();
+        while(file){
+            Serial.print("FILE: ");
+            Serial.println(file.name());
+            file = root.openNextFile();
+        }
+
+        root = filesystem.open("/");
+        file = root.openNextFile();
         while (file)
         {
             if (file.isDirectory())
@@ -63,12 +75,15 @@ void setup()
                 int8_t len = strlen(filename);
                 if (strstr(strlwr(filename + (len - 4)), ".nes"))
                 {
+                    if (fileCounter == fileToUse) {
                     foundRom = true;
                     char fullFilename[256];
                     sprintf(fullFilename, "%s/%s", FSROOT, filename);
                     Serial.println(fullFilename);
                     argv[0] = fullFilename;
                     break;
+                    }
+                    fileCounter++;
                 }
             }
 
