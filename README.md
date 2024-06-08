@@ -9,7 +9,7 @@ Then it was ported to the Fri3D Camp 2022 Badge, and hopefully soon to the Fri3D
 
 ### Fri3D Camp 2022 Badge:
 
-What works:
+Done:
 
 * Display works
 * Audio works using the buzzer, so quality is "not great, not terrible"
