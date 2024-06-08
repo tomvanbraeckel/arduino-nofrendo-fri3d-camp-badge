@@ -84,7 +84,7 @@ To manually format the SPIFFS filesystem, put this below:
 display_begin();
 ```
 
-in esp32-nofrendo:
+in esp32-nofrendo.ino:
 
 ```
 Serial.println("Formatting SPIFFS, this can take a minute...");
