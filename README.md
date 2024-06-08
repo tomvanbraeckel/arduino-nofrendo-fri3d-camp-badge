@@ -5,6 +5,10 @@ Credit: https://github.com/moononournation/arduino-nofrendo.git
 
 Then it was ported to the Fri3D Camp 2022 Badge, and hopefully soon to the Fri3D Camp 2024 badge.
 
+# Demonstrations
+
+![SuperMario1](/images/IMG_20240608_112621404.jpg)
+
 ## What works
 
 ### Fri3D Camp 2022 Badge:
