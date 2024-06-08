@@ -5,6 +5,25 @@ Credit: https://github.com/moononournation/arduino-nofrendo.git
 
 Then it was ported to the Fri3D Camp 2022 Badge, and hopefully soon to the Fri3D Camp 2024 badge.
 
+## What works
+
+### Fri3D Camp 2022 Badge:
+
+What works:
+
+* Display works
+* Audio works using the buzzer, so quality is "not great, not terrible"
+* ROM files are read from SPIFFS filesystem (as it doesn't have an SD card reader)
+* START button (connect GND to IO13, the "2" pad) works
+
+TODO:
+
+* More button configuration (the badge doesn't have buttons)
+
+### Fri3D Camp 2024 Badge:
+
+* All TODO (I need a prototype board!)
+
 
 ## Installation
 
