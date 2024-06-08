@@ -7,7 +7,7 @@ Then it was ported to the Fri3D Camp 2022 Badge, and hopefully soon to the Fri3D
 
 # Demonstrations
 
-![SuperMario1](/images/IMG_20240608_112621404.jpg)
+[![SuperMario1](/images/IMG_20240608_112621404.jpg)](https://www.youtube.com/watch?v=A5guqi13I2M)
 ![SuperMario2](/images/IMG_20240608_112636094.jpg)
 ![PacMan1](/images/IMG_20240608_115050745.jpg)
 ![PacMan2](/images/IMG_20240608_115120776.jpg)
