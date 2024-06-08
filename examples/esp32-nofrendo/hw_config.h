@@ -98,7 +98,7 @@
 #define HW_CONTROLLER_GPIO_START 13 // starts most games, such as PacMan and Chase
 #define HW_CONTROLLER_GPIO_A 14
 #define HW_CONTROLLER_GPIO_B 4
-#define HW_CONTROLLER_GPIO_X 27
+#define HW_CONTROLLER_GPIO_X 13
 #define HW_CONTROLLER_GPIO_Y 26
 
 /* controller is I2C M5Stack CardKB */
