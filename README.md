@@ -1,6 +1,7 @@
 # arduino-nofrendo for Fri3D Camp Badge
 
 This is a special version of the nofrendo NES emulator, ported to work an an Arduino library.
+
 Credit: https://github.com/moononournation/arduino-nofrendo.git
 
 Then it was ported to the Fri3D Camp 2022 Badge, and hopefully soon to the Fri3D Camp 2024 badge.
