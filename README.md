@@ -80,7 +80,8 @@ So you should be able to start a game by connecting the "2" pad (GPIO13) to GND 
 
 To manually format the SPIFFS filesystem, put this below:
 
-```display_begin();
+```
+display_begin();
 ```
 
 in esp32-nofrendo:
